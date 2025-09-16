@@ -1,0 +1,124 @@
+name: README Animations
+on:
+  schedule: [{ cron: "0 4 * * *" }]  # diario 04:00 Bogotá
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generar SVGs
+        shell: bash
+        run: |
+          mkdir -p dist
+
+          # 1) Typing banner (con soporte auto claro/oscuro)
+          cat > dist/typing-banner.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+            <defs>
+              <style>
+                .title { font: 700 28px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #7c3aed; }
+                .role  { font: 500 16px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #0ea5e9; }
+                @media (prefers-color-scheme: dark) {
+                  .title { fill: #a78bfa; }
+                  .role  { fill: #67e8f9; }
+                }
+              </style>
+              <clipPath id="cursor-clip">
+                <rect x="0" y="0" width="0" height="40">
+                  <animate attributeName="width" values="0;780;0" dur="6s" repeatCount="indefinite" keyTimes="0;0.6;1"/>
+                </rect>
+              </clipPath>
+            </defs>
+
+            <g transform="translate(12,42)">
+              <text class="title">Santiago Contreras</text>
+              <rect x="0" y="-22" width="2" height="34" fill="#22d3ee">
+                <animate attributeName="x" values="0;780;0" dur="6s" repeatCount="indefinite" keyTimes="0;0.6;1"/>
+                <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+              </rect>
+              <g clip-path="url(#cursor-clip)">
+                <rect x="0" y="-26" width="780" height="42" fill="transparent"/>
+              </g>
+            </g>
+
+            <g transform="translate(12,82)" class="role">
+              <text>
+                <tspan>Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js</tspan>
+                <animate attributeName="x" values="0;-820;0" dur="18s" repeatCount="indefinite"/>
+              </text>
+            </g>
+          </svg>
+          SVG
+
+          # 2) Orbit rings
+          cat > dist/orbit.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180">
+            <defs>
+              <style>
+                .title { font: 700 18px system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#475569; }
+                @media (prefers-color-scheme: dark) { .title { fill:#e2e8f0; } }
+              </style>
+              <radialGradient id="grad">
+                <stop offset="0" stop-color="#38bdf8" stop-opacity="0.9"/>
+                <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.9"/>
+              </radialGradient>
+            </defs>
+            <rect width="800" height="180" fill="transparent"/>
+            <g transform="translate(400,90)">
+              <circle r="46" fill="url(#grad)"/>
+              <circle r="60" fill="none" stroke="#94a3b8" stroke-dasharray="3 6"/>
+              <circle r="90" fill="none" stroke="#94a3b8" stroke-dasharray="3 6"/>
+              <circle r="120" fill="none" stroke="#94a3b8" stroke-dasharray="3 6"/>
+              <g>
+                <circle r="6" fill="#22d3ee">
+                  <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="8s" repeatCount="indefinite"/>
+                  <animate attributeName="cx" values="60;60" dur="8s" repeatCount="indefinite"/>
+                </circle>
+                <circle r="5" fill="#a78bfa">
+                  <animateTransform attributeName="transform" type="rotate" from="180 0 0" to="540 0 0" dur="12s" repeatCount="indefinite"/>
+                  <animate attributeName="cx" values="90;90" dur="12s" repeatCount="indefinite"/>
+                </circle>
+                <circle r="4" fill="#34d399">
+                  <animateTransform attributeName="transform" type="rotate" from="90 0 0" to="450 0 0" dur="16s" repeatCount="indefinite"/>
+                  <animate attributeName="cx" values="120;120" dur="16s" repeatCount="indefinite"/>
+                </circle>
+              </g>
+            </g>
+            <text x="16" y="28" class="title">Tech orbit · Java • Spring Boot • Selenium • React Native • TypeScript • Python</text>
+          </svg>
+          SVG
+
+          # 3) Wave divider
+          cat > dist/wave-divider.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" width="800" height="80" viewBox="0 0 800 80">
+            <defs>
+              <linearGradient id="w" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#06b6d4"/>
+                <stop offset="1" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="80" fill="transparent"/>
+            <g fill="none" stroke="url(#w)" stroke-width="3">
+              <path id="p" d="M0,40 C80,10 160,70 240,40 S400,10 480,40 640,70 720,40 880,10 960,40" />
+              <use href="#p">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="-160 0" dur="3.5s" repeatCount="indefinite"/>
+              </use>
+              <use href="#p" transform="translate(160 0)">
+                <animateTransform attributeName="transform" type="translate" from="160 0" to="0 0" dur="3.5s" repeatCount="indefinite"/>
+              </use>
+            </g>
+          </svg>
+          SVG
+
+      - name: Publicar a rama output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
