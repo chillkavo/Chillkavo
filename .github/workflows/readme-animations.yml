@@ -71,14 +71,11 @@ jobs:
 
             <rect width="800" height="180" fill="transparent"/>
 
-            <g transform="translate(400,90)">
-              <!-- planeta central -->
-              <circle r="46" fill="url(#planet)"/>
-
-              <!-- órbitas -->
-              <circle class="ring" r="60"/>
-              <circle class="ring" r="90"/>
-              <circle class="ring" r="120"/>
+              <g transform="translate(400,90)">
+              <circle r="40" fill="url(#planet)"/>
+              <circle class="ring" r="50"/>
+              <circle class="ring" r="75"/>
+              <circle class="ring" r="100"/>
 
               <!-- Java -->
               <g>
