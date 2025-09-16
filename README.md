@@ -1,7 +1,7 @@
 # Hola, soy Santiago Contreras 
 
 ### Mi snake
-![Snake animation](https://raw.githubusercontent.com/chillkavo/santiago-contreras/output/snake.svg)
+![Snake animation](https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake.svg)
 
 Estudiante de Ingeniería de Sistemas (Bogotá). Construyo backend con **Java / Spring Boot**, trabajo bases de datos **MySQL/PostgreSQL**, automatizo con **Selenium** y mido calidad con **SonarQube**. También desarrollo con **React Native**, **TypeScript**, **Python** y **Node.js**.
 
