@@ -1,8 +1,7 @@
 # Hola, soy Santiago Contreras 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-dracula.svg">
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-gruvbox.svg">
-</picture>
+
+### Wave divider
+<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/wave-divider.svg" alt="Wave divider animation" />
 
 
 Estudiante de Ingeniería de Sistemas (Bogotá). Construyo backend con **Java / Spring Boot**, trabajo bases de datos **MySQL/PostgreSQL**, automatizo con **Selenium** y mido calidad con **SonarQube**. También desarrollo con **React Native**, **TypeScript**, **Python** y **Node.js**.
@@ -28,14 +27,19 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 - Cobertura con **JaCoCo** y reportes en PR.  
 - Issues/PRs con plantillas y roadmap breve.
 
-### Typing banner
-<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" alt="Typing banner" />
 
+
+  
 ### Orbit
 <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/orbit.svg" alt="Orbit animation" />
 
-### Wave divider
-<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/wave-divider.svg" alt="Wave divider animation" />
+
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-dracula.svg">
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-gruvbox.svg">
+</picture>
 
 
 ## Contacto
