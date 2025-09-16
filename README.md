@@ -1,6 +1,4 @@
 # Hola, soy Santiago Contreras 
-
-### Mi snake
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-dracula.svg">
   <img alt="Snake animation" src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-gruvbox.svg">
