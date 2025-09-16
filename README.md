@@ -1,5 +1,32 @@
 # Hola, soy Santiago Contreras 
 
+name: Snake
+on:
+  schedule: [{ cron: "0 3 * * *" }]   # diario 03:00 Bogotá
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: santiago-contreras   # <-- tu usuario exacto de GitHub
+          outputs: |
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
+      - name: Publicar a rama output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
 Estudiante de Ingeniería de Sistemas (Bogotá). Construyo backend con **Java / Spring Boot**, trabajo bases de datos **MySQL/PostgreSQL**, automatizo con **Selenium** y mido calidad con **SonarQube**. También desarrollo con **React Native**, **TypeScript**, **Python** y **Node.js**.
 
 ## Ahora
