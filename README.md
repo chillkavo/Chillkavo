@@ -28,6 +28,16 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 - Cobertura con **JaCoCo** y reportes en PR.  
 - Issues/PRs con plantillas y roadmap breve.
 
+### Typing banner
+<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" alt="Typing banner" />
+
+### Orbit
+<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/orbit.svg" alt="Orbit animation" />
+
+### Wave divider
+<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/wave-divider.svg" alt="Wave divider animation" />
+
+
 ## Contacto
 [LinkedIn](https://www.linkedin.com/in/santiago-contreras-chillsanto) • [Email](mailto:santocontreras22003@gmail.com)
 
