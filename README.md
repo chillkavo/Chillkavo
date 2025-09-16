@@ -2,6 +2,7 @@
 <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/wave-divider.svg" alt="Wave divider animation" />
 
 
+
 Estudiante de Ingeniería de Sistemas (Bogotá). Construyo backend con **Java / Spring Boot**, trabajo bases de datos **MySQL/PostgreSQL**, automatizo con **Selenium** y mido calidad con **SonarQube**. También desarrollo con **React Native**, **TypeScript**, **Python** y **Node.js**.
 
 ## Ahora
