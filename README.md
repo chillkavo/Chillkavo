@@ -1,6 +1,4 @@
 # Hola, soy Santiago Contreras 
-
-### Wave divider
 <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/wave-divider.svg" alt="Wave divider animation" />
 
 
