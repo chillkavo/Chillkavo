@@ -2,7 +2,6 @@
 <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/wave-divider.svg" alt="Wave divider animation" />
 
 
-
 Estudiante de Ingeniería de Sistemas (Bogotá). Construyo backend con **Java / Spring Boot**, trabajo bases de datos **MySQL/PostgreSQL**, automatizo con **Selenium** y mido calidad con **SonarQube**. También desarrollo con **React Native**, **TypeScript**, **Python** y **Node.js**.
 
 ## Ahora
@@ -19,6 +18,11 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 
 
 > Cuando publique/abra cada repo aquí, los fijaré en el perfil (Pins) para acceso rápido.
+
+
+### Typing banner
+<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" alt="Typing banner" />
+
 
 ## Cómo trabajo
 - Commits con **Conventional Commits** (`feat:`, `fix:`, `docs:`).  
