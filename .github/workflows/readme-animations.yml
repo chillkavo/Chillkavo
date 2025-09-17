@@ -72,44 +72,45 @@ jobs:
             <rect width="800" height="180" fill="transparent"/>
 
               <g transform="translate(400,90)">
-              <circle r="40" fill="url(#planet)"/>
-              <circle class="ring" r="50"/>
-              <circle class="ring" r="75"/>
-              <circle class="ring" r="100"/>
+              <circle r="32" fill="url(#planet)"/>
+              <circle class="ring" r="45"/>
+              <circle class="ring" r="70"/>
+              <circle class="ring" r="85"/>
 
+              
               <!-- Java -->
               <g>
-                <circle cx="60" cy="0" r="6" fill="#f89820"><title>Java</title></circle>
+                <circle cx="45" cy="0" r="6" fill="#f89820"><title>Java</title></circle>
                 <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
               </g>
 
               <!-- Spring Boot -->
               <g>
-                <circle cx="60" cy="0" r="5" fill="#6DB33F"><title>Spring Boot</title></circle>
+                <circle cx="45" cy="0" r="5" fill="#6DB33F"><title>Spring Boot</title></circle>
                 <animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="8s" repeatCount="indefinite"/>
               </g>
 
               <!-- Selenium -->
               <g>
-                <circle cx="90" cy="0" r="5" fill="#43B02A"><title>Selenium</title></circle>
+                <circle cx="70" cy="0" r="5" fill="#43B02A"><title>Selenium</title></circle>
                 <animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="12s" repeatCount="indefinite"/>
               </g>
 
               <!-- React Native -->
               <g>
-                <circle cx="90" cy="0" r="6" fill="#61DAFB"><title>React Native</title></circle>
+                <circle cx="70" cy="0" r="6" fill="#61DAFB"><title>React Native</title></circle>
                 <animateTransform attributeName="transform" type="rotate" from="270" to="630" dur="12s" repeatCount="indefinite"/>
               </g>
 
               <!-- TypeScript -->
               <g>
-                <circle cx="120" cy="0" r="5" fill="#3178C6"><title>TypeScript</title></circle>
+                <circle cx="85" cy="0" r="5" fill="#3178C6"><title>TypeScript</title></circle>
                 <animateTransform attributeName="transform" type="rotate" from="45" to="405" dur="16s" repeatCount="indefinite"/>
               </g>
 
               <!-- Python -->
               <g>
-                <circle cx="120" cy="0" r="5" fill="#FFD43B"><title>Python</title></circle>
+                <circle cx="85" cy="0" r="5" fill="#FFD43B"><title>Python</title></circle>
                 <animateTransform attributeName="transform" type="rotate" from="225" to="585" dur="16s" repeatCount="indefinite"/>
               </g>
             </g>
