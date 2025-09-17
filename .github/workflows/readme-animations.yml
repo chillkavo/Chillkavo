@@ -21,37 +21,29 @@ jobs:
           <svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
             <defs>
               <style>
-                .title { font: 700 28px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #7c3aed; }
-                .role  { font: 500 16px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; fill: #0ea5e9; }
-                @media (prefers-color-scheme: dark) {
-                  .title { fill: #a78bfa; }
-                  .role  { fill: #67e8f9; }
+                .title{font:700 28px system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#7c3aed}
+                .role{font:500 16px system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#0ea5e9}
+                @media (prefers-color-scheme: dark){
+                  .title{fill:#a78bfa}
+                  .role{fill:#67e8f9}
                 }
               </style>
-              <clipPath id="cursor-clip">
-                <rect x="0" y="0" width="0" height="40">
-                  <animate attributeName="width" values="0;780;0" dur="6s" repeatCount="indefinite" keyTimes="0;0.6;1"/>
-                </rect>
-              </clipPath>
-            </defs>
-
-            <g transform="translate(12,42)">
-              <text class="title">Santiago Contreras</text>
-              <rect x="0" y="-22" width="2" height="34" fill="#22d3ee">
-                <animate attributeName="x" values="0;780;0" dur="6s" repeatCount="indefinite" keyTimes="0;0.6;1"/>
-                <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
-              </rect>
-              <g clip-path="url(#cursor-clip)">
-                <rect x="0" y="-26" width="780" height="42" fill="transparent"/>
-              </g>
-            </g>
-
-            <g transform="translate(12,82)" class="role">
-              <text>
-                <tspan>Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js</tspan>
-                <animate attributeName="x" values="0;-820;0" dur="18s" repeatCount="indefinite"/>
-              </text>
-            </g>
+              <!-- 🔧 TILE_W = 1200: ancho del “bloque” repetido -->
+              <!-- Si tu texto es MUY largo, sube este ancho y los 'x' y 'to' a juego -->
+              <pattern id="marquee" patternUnits="userSpaceOnUse" width="1200" height="28">
+              <!-- ✍️ EDITA AQUÍ tu texto (se repite 2 veces para que no haya cortes) -->
+              <text class="role" x="0" y="20">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
+              <text class="role" x="1200" y="20">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
+                <!-- ⏱️ Velocidad del scroll: cambia dur="18s" -->
+                <animateTransform attributeName="patternTransform" type="translate"
+                  from="0 0" to="-1200 0" dur="18s" repeatCount="indefinite"/>
+                  </pattern>
+                  </defs>
+            <rect width="800" height="120" fill="transparent"/>
+            <!-- ✍️ Tu nombre/título -->
+            <text class="title" x="12" y="44">Santiago Contreras</text>
+            <!-- Cinta infinita -->
+            <rect x="12" y="76" width="776" height="28" fill="url(#marquee)"/>
           </svg>
           SVG
 
