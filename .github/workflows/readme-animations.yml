@@ -28,22 +28,30 @@ jobs:
                   .role{fill:#67e8f9}
                 }
               </style>
-              <!-- 🔧 TILE_W = 1200: ancho del “bloque” repetido -->
-              <!-- Si tu texto es MUY largo, sube este ancho y los 'x' y 'to' a juego -->
-              <pattern id="marquee" patternUnits="userSpaceOnUse" width="1200" height="28">
-              <!-- ✍️ EDITA AQUÍ tu texto (se repite 2 veces para que no haya cortes) -->
-              <text class="role" x="0" y="20">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
-              <text class="role" x="1200" y="20">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
-                <!-- ⏱️ Velocidad del scroll: cambia dur="18s" -->
-                <animateTransform attributeName="patternTransform" type="translate"
-                  from="0 0" to="-1200 0" dur="18s" repeatCount="indefinite"/>
-                  </pattern>
-                  </defs>
-            <rect width="800" height="120" fill="transparent"/>
-            <!-- ✍️ Tu nombre/título -->
+            </defs>
+            
+            <!-- título -->
             <text class="title" x="12" y="44">Santiago Contreras</text>
-            <!-- Cinta infinita -->
-            <rect x="12" y="76" width="776" height="28" fill="url(#marquee)"/>
+
+            <!-- ventana del banner (alto generoso para que no se corten descendentes) -->
+            <clipPath id="bandClip"><rect x="12" y="76" width="776" height="32" rx="6"/></clipPath>
+
+            <!-- 🔧 CONFIG: texto y ancho del tile -->
+            <!-- Cambia el contenido de TEXT y si hace falta aumenta TILE_W y el 'to' a -TILE_W -->
+            <!-- TILE_W debe ser mayor que el ancho total del texto -->
+            <g clip-path="url(#bandClip)" transform="translate(0,0)">
+              <g id="track" transform="translate(0,0)">
+                <!-- ✍️ TEXT (edítalo a tu gusto; deja un separador al final " • ") -->
+                <text class="role" x="12" y="96">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
+                <!-- segunda copia para loop perfecto -->
+                <text class="role" x="1400" y="96">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
+
+                <!-- ⏱️ Velocidad del scroll: cambia dur -->
+                <!-- ⬅️ TILE_W = 1400 → to="-1400 0" -->
+                <animateTransform attributeName="transform" type="translate"
+                  from="0 0" to="-1400 0" dur="18s" repeatCount="indefinite"/>
+              </g>
+            </g>
           </svg>
           SVG
 
