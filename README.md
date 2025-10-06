@@ -8,7 +8,7 @@
 
 ---
 
-### 💻 Sobre mí
+<p align="center"> Sobre mí </p>
 
 Soy estudiante de **Ingeniería de Sistemas** apasionado por el desarrollo de software, la automatización y la calidad de código.  
 Construyo backends robustos con **Java / Spring Boot**, manejo bases de datos **MySQL y PostgreSQL**, y realizo pruebas automatizadas con **Selenium**.  
@@ -16,17 +16,17 @@ También desarrollo aplicaciones móviles con **React Native**, y complemento mi
 
 ---
 
-### 🚀 Actualmente trabajando en
+<p align="center"> -> Actualmente trabajando en </p>
 
 | Proyecto | Descripción | Tecnologías |
 |-----------|--------------|-------------|
-| 🧩 **Sistema de Alquileres** | Gestión de alquileres con roles (admin/visor/empresa), reportes y CRUD completo. | Spring Boot • Thymeleaf • MySQL |
-| 🏥 **HealthOne** | Diseño de base de datos médica con modelo entidad-relación y normalización a 3NF. | PostgreSQL • ERD • Normalización |
-| 🤖 **Automatización Selenium** | Pruebas de integración y flujo de usuario automatizado. | Selenium • JUnit • CI/CD |
+| **Sistema de Alquileres** | Gestión de alquileres con roles (admin/visor/empresa), reportes y CRUD completo. | Spring Boot • Thymeleaf • MySQL |
+| **HealthOne** | Diseño de base de datos médica con modelo entidad-relación y normalización a 3NF. | PostgreSQL • ERD • Normalización |
+| **Automatización Selenium** | Pruebas de integración y flujo de usuario automatizado. | Selenium • JUnit • CI/CD |
 
 ---
 
-### 🧠 Tech Stack
+<p align="center"> Tech Stack </p>
 
 <p align="center">
   <!-- Backend -->
@@ -67,7 +67,7 @@ También desarrollo aplicaciones móviles con **React Native**, y complemento mi
 
 ---
 
-### ⚙️ Cómo trabajo
+<p align="center"> Cómo trabajo </p>
 
 - Uso **Conventional Commits** (`feat:`, `fix:`, `docs:`) para mantener un historial limpio.  
 - Integro CI/CD con **GitHub Actions** para compilar y ejecutar pruebas automáticamente.  
@@ -76,7 +76,7 @@ También desarrollo aplicaciones móviles con **React Native**, y complemento mi
 
 ---
 
-### 🌐 Contacto
+<p align="center">  Contacto </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/santiago-contreras-chillsanto" target="_blank" style="text-decoration:none;">
