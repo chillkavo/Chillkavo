@@ -34,11 +34,6 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 
 
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-dracula.svg">
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-gruvbox.svg">
-</picture>
-
 
 ## Contacto
 [LinkedIn](https://www.linkedin.com/in/santiago-contreras-chillsanto) • [Email](mailto:santocontreras22003@gmail.com)
@@ -46,4 +41,9 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 
 <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" alt="Typing banner" />
 
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-dracula.svg">
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-gruvbox.svg">
+</picture>
 
