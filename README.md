@@ -19,11 +19,6 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 
 > Cuando publique/abra cada repo aquí, los fijaré en el perfil (Pins) para acceso rápido.
 
-
-### Typing banner
-<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" alt="Typing banner" />
-
-
 ## Cómo trabajo
 - Commits con **Conventional Commits** (`feat:`, `fix:`, `docs:`).  
 - CI con **GitHub Actions** (build + tests).  
@@ -47,5 +42,9 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 
 ## Contacto
 [LinkedIn](https://www.linkedin.com/in/santiago-contreras-chillsanto) • [Email](mailto:santocontreras22003@gmail.com)
+
+
+### Typing banner
+<img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" alt="Typing banner" />
 
 
