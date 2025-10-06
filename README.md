@@ -42,8 +42,8 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" alt="Typing banner" />
 
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-dracula.svg">
-  <img alt="Snake animation" src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-gruvbox.svg">
-</picture>
+<!-- 🐍 Snake animation -->
+![Snake animation dark](https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-dark.svg#gh-dark-mode-only)
+![Snake animation light](https://raw.githubusercontent.com/chillkavo/chillkavo/output/snake-light.svg#gh-light-mode-only)
+
 
