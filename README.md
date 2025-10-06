@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/heading-sobre-mi.svg" width="800" alt="Sobre mí" />
+  Sobre mi
 </p>
 
 Soy estudiante de **Ingeniería de Sistemas** apasionado por el desarrollo de software, la automatización y la calidad de código.  
