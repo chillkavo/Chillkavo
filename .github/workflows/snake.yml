@@ -1,7 +1,7 @@
 name: Snake
 
 on:
-  schedule: [{ cron: "0 3 * * *" }]   # diario 03:00 Bogotá
+  schedule: [{ cron: "0 3 * * *" }]  # diario 03:00 Bogotá
   workflow_dispatch:
 
 permissions:
@@ -13,21 +13,17 @@ concurrency:
 
 jobs:
   build:
-    # evita que este job se ejecute si algún día agregas on: push en este workflow
-    if: github.event_name != 'push' || startsWith(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generar snake
+      - name: Generar snake (modo claro y oscuro)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: chillkavo
           outputs: |
-            dist/snake.svg?palette=github
-            dist/snake-dracula.svg?palette=dracula
-            dist/snake-gruvbox.svg?palette=gruvbox
-            dist/snake-dark.svg?palette=github-dark
+            dist/snake-light.svg?palette=github-light&background=#ffffff
+            dist/snake-dark.svg?palette=github-dark&background=#0d1117
 
       - name: Publicar a rama output
         uses: crazy-max/ghaction-github-pages@v4
@@ -37,3 +33,4 @@ jobs:
           keep_history: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
