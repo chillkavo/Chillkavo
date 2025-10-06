@@ -1,12 +1,19 @@
 name: README Animations
+
 on:
-  schedule: [{ cron: "0 4 * * *" }]  # diario 04:00 Bogotá
+  schedule: [{ cron: "10 3 * * *" }]  # diario 03:10 Bogotá (evita solaparse con Snake)
   workflow_dispatch:
+
 permissions:
   contents: write
 
+concurrency:
+  group: readme-animations
+  cancel-in-progress: true
+
 jobs:
   build:
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,8 +22,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist
-
-          # 1) Typing banner (con soporte auto claro/oscuro)
+          # --- typing banner ---
           cat > dist/typing-banner.svg <<'SVG'
           <svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
             <defs>
@@ -29,33 +35,19 @@ jobs:
                 }
               </style>
             </defs>
-            
-            <!-- título -->
             <text class="title" x="12" y="44">Santiago Contreras</text>
-
-            <!-- ventana del banner (alto generoso para que no se corten descendentes) -->
             <clipPath id="bandClip"><rect x="12" y="76" width="776" height="32" rx="6"/></clipPath>
-
-            <!-- 🔧 CONFIG: texto y ancho del tile -->
-            <!-- Cambia el contenido de TEXT y si hace falta aumenta TILE_W y el 'to' a -TILE_W -->
-            <!-- TILE_W debe ser mayor que el ancho total del texto -->
             <g clip-path="url(#bandClip)" transform="translate(0,0)">
               <g id="track" transform="translate(0,0)">
-                <!-- ✍️ TEXT (edítalo a tu gusto; deja un separador al final " • ") -->
                 <text class="role" x="12" y="96">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
-                <!-- segunda copia para loop perfecto -->
                 <text class="role" x="1400" y="96">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
-
-                <!-- ⏱️ Velocidad del scroll: cambia dur -->
-                <!-- ⬅️ TILE_W = 1400 → to="-1400 0" -->
-                <animateTransform attributeName="transform" type="translate"
-                  from="0 0" to="-1400 0" dur="18s" repeatCount="indefinite"/>
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="-1400 0" dur="18s" repeatCount="indefinite"/>
               </g>
             </g>
           </svg>
           SVG
 
-          # 2) Orbit rings
+          # --- orbit rings ---
           cat > dist/orbit.svg <<'SVG'
           <svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180">
             <defs>
@@ -68,98 +60,39 @@ jobs:
                 @media (prefers-color-scheme: dark){ .ring{ stroke:#cbd5e1; opacity:.35 } }
               </style>
             </defs>
-
             <rect width="800" height="180" fill="transparent"/>
-
-              <g transform="translate(400,90)">
+            <g transform="translate(400,90)">
               <circle r="32" fill="url(#planet)"/>
               <circle class="ring" r="45"/>
               <circle class="ring" r="70"/>
               <circle class="ring" r="85"/>
-
-              
-              <!-- Java -->
-              <g>
-                <circle cx="45" cy="0" r="6" fill="#f89820"><title>Java</title></circle>
-                <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
-              </g>
-
-              <!-- Spring Boot -->
-              <g>
-                <circle cx="45" cy="0" r="5" fill="#6DB33F"><title>Spring Boot</title></circle>
-                <animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="8s" repeatCount="indefinite"/>
-              </g>
-
-              <!-- Selenium -->
-              <g>
-                <circle cx="70" cy="0" r="5" fill="#43B02A"><title>Selenium</title></circle>
-                <animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="12s" repeatCount="indefinite"/>
-              </g>
-
-              <!-- React Native -->
-              <g>
-                <circle cx="70" cy="0" r="6" fill="#61DAFB"><title>React Native</title></circle>
-                <animateTransform attributeName="transform" type="rotate" from="270" to="630" dur="12s" repeatCount="indefinite"/>
-              </g>
-
-              <!-- TypeScript -->
-              <g>
-                <circle cx="85" cy="0" r="5" fill="#3178C6"><title>TypeScript</title></circle>
-                <animateTransform attributeName="transform" type="rotate" from="45" to="405" dur="16s" repeatCount="indefinite"/>
-              </g>
-
-              <!-- Python -->
-              <g>
-                <circle cx="85" cy="0" r="5" fill="#FFD43B"><title>Python</title></circle>
-                <animateTransform attributeName="transform" type="rotate" from="225" to="585" dur="16s" repeatCount="indefinite"/>
-              </g>
+              <g><circle cx="45" cy="0" r="6" fill="#f89820"><title>Java</title></circle><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/></g>
+              <g><circle cx="45" cy="0" r="5" fill="#6DB33F"><title>Spring Boot</title></circle><animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="8s" repeatCount="indefinite"/></g>
+              <g><circle cx="70" cy="0" r="5" fill="#43B02A"><title>Selenium</title></circle><animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="12s" repeatCount="indefinite"/></g>
+              <g><circle cx="70" cy="0" r="6" fill="#61DAFB"><title>React Native</title></circle><animateTransform attributeName="transform" type="rotate" from="270" to="630" dur="12s" repeatCount="indefinite"/></g>
+              <g><circle cx="85" cy="0" r="5" fill="#3178C6"><title>TypeScript</title></circle><animateTransform attributeName="transform" type="rotate" from="45" to="405" dur="16s" repeatCount="indefinite"/></g>
+              <g><circle cx="85" cy="0" r="5" fill="#FFD43B"><title>Python</title></circle><animateTransform attributeName="transform" type="rotate" from="225" to="585" dur="16s" repeatCount="indefinite"/></g>
             </g>
           </svg>
           SVG
-          #Wave Divider
+
+          # --- wave divider ---
           cat > dist/wave-divider.svg <<'SVG'
           <svg xmlns="http://www.w3.org/2000/svg" width="800" height="84" viewBox="0 0 800 84">
             <defs>
-              <!-- Colores -->
-              <linearGradient id="gA" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#06b6d4"/>
-                <stop offset="1" stop-color="#8b5cf6"/>
-              </linearGradient>
-              <linearGradient id="gB" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#22d3ee"/>
-                <stop offset="1" stop-color="#3b82f6"/>
-              </linearGradient>
-
-              <!-- Tile de 240px que se repite; animamos el pattern, no el path -->
+              <linearGradient id="gA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+              <linearGradient id="gB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
               <pattern id="waveFast" patternUnits="userSpaceOnUse" width="240" height="84">
-                <path d="M0,42 C60,12 180,72 240,42"
-                      fill="none" stroke="url(#gA)" stroke-width="3"
-                      stroke-linecap="round" stroke-linejoin="round"
-                      vector-effect="non-scaling-stroke"/>
-                <animateTransform attributeName="patternTransform" type="translate"
-                  from="0 0" to="-240 0" dur="3.6s" repeatCount="indefinite"/>
+                <path d="M0,42 C60,12 180,72 240,42" fill="none" stroke="url(#gA)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+                <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="-240 0" dur="3.6s" repeatCount="indefinite"/>
               </pattern>
-
               <pattern id="waveSlow" patternUnits="userSpaceOnUse" width="240" height="84">
-                <path d="M0,44 C60,18 180,66 240,44"
-                      fill="none" stroke="url(#gB)" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" opacity="0.6"
-                      vector-effect="non-scaling-stroke"/>
-                <animateTransform attributeName="patternTransform" type="translate"
-                  from="0 0" to="-240 0" dur="7.2s" repeatCount="indefinite"/>
+                <path d="M0,44 C60,18 180,66 240,44" fill="none" stroke="url(#gB)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" vector-effect="non-scaling-stroke"/>
+                <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="-240 0" dur="7.2s" repeatCount="indefinite"/>
               </pattern>
-
-              <!-- Suavizado del borde derecho (izq 100% visible) -->
-              <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0"    stop-color="#fff" stop-opacity="1"/>
-                <stop offset="0.985" stop-color="#fff" stop-opacity="1"/>
-                <stop offset="1"    stop-color="#fff" stop-opacity="0"/>
-              </linearGradient>
-              <mask id="edgeMask">
-                <rect width="800" height="84" fill="url(#edge)"/>
-              </mask>
+              <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="0.985" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              <mask id="edgeMask"><rect width="800" height="84" fill="url(#edge)"/></mask>
             </defs>
-
             <rect width="800" height="84" fill="transparent"/>
             <g mask="url(#edgeMask)">
               <rect width="800" height="84" fill="url(#waveSlow)"/>
@@ -173,5 +106,7 @@ jobs:
         with:
           target_branch: output
           build_dir: dist
+          keep_history: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
