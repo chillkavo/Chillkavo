@@ -28,7 +28,7 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 
 
   
-### Orbit
+
 <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/orbit.svg" alt="Orbit animation" />
 
 
