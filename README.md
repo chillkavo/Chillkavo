@@ -8,7 +8,9 @@
 
 ---
 
-<p align="center"> Sobre mí </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/heading-sobre-mi.svg" width="800" alt="Sobre mí" />
+</p>
 
 Soy estudiante de **Ingeniería de Sistemas** apasionado por el desarrollo de software, la automatización y la calidad de código.  
 Construyo backends robustos con **Java / Spring Boot**, manejo bases de datos **MySQL y PostgreSQL**, y realizo pruebas automatizadas con **Selenium**.  
@@ -16,7 +18,9 @@ También desarrollo aplicaciones móviles con **React Native**, y complemento mi
 
 ---
 
-<p align="center"> -> Actualmente trabajando en </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/heading-ahora.svg" width="800" alt="Actualmente trabajando en" />
+</p>
 
 | Proyecto | Descripción | Tecnologías |
 |-----------|--------------|-------------|
@@ -67,7 +71,9 @@ También desarrollo aplicaciones móviles con **React Native**, y complemento mi
 
 ---
 
-<p align="center"> Cómo trabajo </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/heading-metodo.svg" width="800" alt="Cómo trabajo" />
+</p>
 
 - Uso **Conventional Commits** (`feat:`, `fix:`, `docs:`) para mantener un historial limpio.  
 - Integro CI/CD con **GitHub Actions** para compilar y ejecutar pruebas automáticamente.  
