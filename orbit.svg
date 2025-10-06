@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180">
+  <defs>
+    <radialGradient id="planet">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.95"/>
+    </radialGradient>
+    <style>
+      .ring{ fill:none; stroke:#94a3b8; stroke-dasharray:3 6; opacity:.55 }
+      @media (prefers-color-scheme: dark){ .ring{ stroke:#cbd5e1; opacity:.35 } }
+    </style>
+  </defs>
+  <rect width="800" height="180" fill="transparent"/>
+  <g transform="translate(400,90)">
+    <circle r="32" fill="url(#planet)"/>
+    <circle class="ring" r="45"/>
+    <circle class="ring" r="70"/>
+    <circle class="ring" r="85"/>
+    <g><circle cx="45" cy="0" r="6" fill="#f89820"><title>Java</title></circle><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/></g>
+    <g><circle cx="45" cy="0" r="5" fill="#6DB33F"><title>Spring Boot</title></circle><animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="8s" repeatCount="indefinite"/></g>
+    <g><circle cx="70" cy="0" r="5" fill="#43B02A"><title>Selenium</title></circle><animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="12s" repeatCount="indefinite"/></g>
+    <g><circle cx="70" cy="0" r="6" fill="#61DAFB"><title>React Native</title></circle><animateTransform attributeName="transform" type="rotate" from="270" to="630" dur="12s" repeatCount="indefinite"/></g>
+    <g><circle cx="85" cy="0" r="5" fill="#3178C6"><title>TypeScript</title></circle><animateTransform attributeName="transform" type="rotate" from="45" to="405" dur="16s" repeatCount="indefinite"/></g>
+    <g><circle cx="85" cy="0" r="5" fill="#FFD43B"><title>Python</title></circle><animateTransform attributeName="transform" type="rotate" from="225" to="585" dur="16s" repeatCount="indefinite"/></g>
+  </g>
+</svg>

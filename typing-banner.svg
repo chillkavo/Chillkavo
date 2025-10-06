@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="120" viewBox="0 0 800 120">
+  <defs>
+    <style>
+      .title{font:700 28px system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#7c3aed}
+      .role{font:500 16px system-ui,-apple-system,Segoe UI,Roboto,Arial; fill:#0ea5e9}
+      @media (prefers-color-scheme: dark){
+        .title{fill:#a78bfa}
+        .role{fill:#67e8f9}
+      }
+    </style>
+  </defs>
+  <text class="title" x="12" y="44">Santiago Contreras</text>
+  <clipPath id="bandClip"><rect x="12" y="76" width="776" height="32" rx="6"/></clipPath>
+  <g clip-path="url(#bandClip)" transform="translate(0,0)">
+    <g id="track" transform="translate(0,0)">
+      <text class="role" x="12" y="96">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
+      <text class="role" x="1400" y="96">Java • Spring Boot • MySQL/Postgres • Selenium • SonarQube • React Native • TypeScript • Python • Node.js • </text>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1400 0" dur="18s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>
