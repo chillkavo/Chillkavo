@@ -50,13 +50,19 @@ Java • Spring Boot • Maven • JPA/Hibernate • MySQL/PostgreSQL • Thymel
 ### 🌐 Contacto
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/santiago-contreras-chillsanto" target="_blank">LinkedIn</a> • 
-  <a href="mailto:santocontreras22003@gmail.com">Email</a>
+  <a href="https://www.linkedin.com/in/santiago-contreras-chillsanto" target="_blank" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  &nbsp;
+  <a href="mailto:santocontreras22003@gmail.com" target="_blank" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+  &nbsp;
+  <a href="https://github.com/chillkavo" target="_blank" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/chillkavo/chillkavo/output/typing-banner.svg" width="800" alt="Typing banner"/>
-</p>
 
 ---
 
